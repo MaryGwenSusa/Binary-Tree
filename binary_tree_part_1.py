@@ -108,13 +108,13 @@ class BinarySearchTreeNode:
     def delete(self, val):
         if val < self.data:
             if self.left:
-                self.left.delete(val) #this recursive approach will be useful to shortened the code and lessen nested if-else/elif conditionals
+                self.left = self.left.delete(val) #this recursive approach will be useful to shortened the code and lessen nested if-else/elif conditionals
             #no need for these code since python will automatically do this
             #else:
             #   return None
         elif val > self.data:
             if self.right:
-                self.right.delete(val)
+                self.right = self.right.delete(val)
         else:
             if self.left is None and self.right is None: #has two child nodes
                 return None
@@ -123,9 +123,13 @@ class BinarySearchTreeNode:
             if self.right is None: #this is for when there is only one child
                 return self.left
             
-            min_val = self.right.find_min()
-            self.data = min_val
-            self.right = self.right.delete(min_val)
+            #min_val = self.right.find_min()
+            #self.data = min_val
+            #self.right = self.right.delete(min_val)
+
+            max_val = self.left.find_max()
+            self.data = max_val
+            self.left = self.left.delete(max_val)
 
         return self
             
