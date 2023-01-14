@@ -37,6 +37,9 @@ class BinarySearchTreeNode:
             elements += self.right.in_order_traversal()
 
         return elements
+
+    def pre_order_traversal(self):
+        elements = [self.data]
     
     def search(self, val):
         if self.data == val:
