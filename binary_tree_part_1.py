@@ -44,6 +44,18 @@ class BinarySearchTreeNode:
         
         if val < self.data:
             #val might be in left subtree
+            if self.left:
+                """recursion"""
+                self.left.search(val) 
+            else:
+                return False
+        
+        if val > self.data:
+            #val might be in right subtree
+            if self.right:
+                return self.right.search(val)
+            else:
+                return False
 
         
 
