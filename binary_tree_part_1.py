@@ -86,6 +86,11 @@ class BinarySearchTreeNode:
         if self.left is None:
             return self.data
         return self.left.find_min()
+    
+    def find_max(self):
+        if self.right is None:
+            return self.data
+        return self.right.find_max()
 
         
 
@@ -105,8 +110,9 @@ if __name__ == '__main__':
     #print(numbers_tree.search(105))
 
     #print("In Order Traversal: \n", numbers_tree.in_order_traversal())
-    print("Pre-Order Traversal: \n", numbers_tree.pre_order_traversal())
-    print("Post-Order Traversal: \n", numbers_tree.post_order_traversal())
+    #print("Pre-Order Traversal: \n", numbers_tree.pre_order_traversal())
+    #print("Post-Order Traversal: \n", numbers_tree.post_order_traversal())
+    print("Min:",numbers_tree.find_min())
 
 
 
