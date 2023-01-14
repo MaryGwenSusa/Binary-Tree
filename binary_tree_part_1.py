@@ -41,6 +41,11 @@ def build_tree(elements):
     #helper method - takes elements as inputs
     root = BinarySearchTreeNode(elements[0])
 
+    for i in range (1, len(elements)):
+        root.add_child(elements[i])
+    
+    return root
+
 if __name__ == '__main__':
     #main method to execute a coroutine on the default event loop?
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
