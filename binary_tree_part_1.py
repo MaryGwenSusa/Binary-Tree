@@ -81,6 +81,11 @@ class BinarySearchTreeNode:
                 return self.right.search(val)
             else:
                 return False
+    
+    def find_min(self):
+        if self.left is None:
+            return self.data
+        return self.left.find_min()
 
         
 
