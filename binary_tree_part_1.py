@@ -83,13 +83,15 @@ class BinarySearchTreeNode:
                 return False
     
     def find_min(self):
-        if self.left is None:
-            return self.data
+        """goes to the left subtree's leftmost node"""
+        if self.left is None: #checks if the current level of the subtree still has a left node child
+            return self.data #returns the leftmost node value
         return self.left.find_min()
     
     def find_max(self):
-        if self.right is None:
-            return self.data
+        """goes to the right subtree's rightmost node"""
+        if self.right is None: #checks if the current level of the subtree still has a right node child
+            return self.data #returns the righmost node value
         return self.right.find_max()
 
     def calculate_sum(self):
@@ -102,6 +104,13 @@ class BinarySearchTreeNode:
         else:
             right_sum = 0
         return self.data + left_sum + right_sum
+    
+    def delete(self, val):
+        if val < self.data:
+            if self.left:
+                self.left.delete(val)
+
+
 
 def build_tree(elements):
     #helper method - takes elements as inputs
@@ -118,12 +127,13 @@ if __name__ == '__main__':
     numbers_tree = build_tree(numbers)
     #print(numbers_tree.search(105))
 
-    #print("In Order Traversal: \n", numbers_tree.in_order_traversal())
-    #print("Pre-Order Traversal: \n", numbers_tree.pre_order_traversal())
-    #print("Post-Order Traversal: \n", numbers_tree.post_order_traversal())
     #print("Min:",numbers_tree.find_min())
     #print("Max:",numbers_tree.find_max())
     print("Sum:", numbers_tree.calculate_sum())
+    #print("In Order Traversal: \n", numbers_tree.in_order_traversal())
+    #print("Pre-Order Traversal: \n", numbers_tree.pre_order_traversal())
+    #print("Post-Order Traversal: \n", numbers_tree.post_order_traversal())
+    
 
 
 
