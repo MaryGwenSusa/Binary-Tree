@@ -22,6 +22,7 @@ class BinarySearchTreeNode:
                 self.right = BinarySearchTreeNode(data)
     
     def in_order_traversal(self):
+        #returns the nodes in ascending order
         elements = []
 
         #visit left tree
@@ -50,4 +51,4 @@ if __name__ == '__main__':
     #main method to execute a coroutine on the default event loop?
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
     numbers_tree = build_tree(numbers)
-    print(numbers_tree)
+    print(numbers_tree.in_order_traversal())
