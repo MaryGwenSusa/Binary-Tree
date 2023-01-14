@@ -133,11 +133,6 @@ class BinarySearchTreeNode:
 
         return self
             
-            
-            
-
-
-
 def build_tree(elements):
     #helper method - takes elements as inputs
     root = BinarySearchTreeNode(elements[0])
