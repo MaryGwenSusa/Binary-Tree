@@ -12,3 +12,9 @@ if __name__ == '__main__':
     print("In Order Traversal: \n", nameTree.in_order_traversal())
     print("Pre-Order Traversal: \n", nameTree.pre_order_traversal())
     print("Post-Order Traversal: \n", nameTree.post_order_traversal())
+    nameTree.delete("m")
+    nameTree.delete("a")
+    nameTree.delete("r")
+    nameTree.delete("y")
+    print("After deleting 'm', 'a', 'r', 'y', ", nameTree.post_order_traversal())
+
