@@ -49,3 +49,5 @@ def build_tree(elements):
 if __name__ == '__main__':
     #main method to execute a coroutine on the default event loop?
     numbers = [17, 4, 1, 20, 9, 23, 18, 34]
+    numbers_tree = build_tree(numbers)
+    print(numbers_tree)
