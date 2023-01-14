@@ -108,13 +108,16 @@ class BinarySearchTreeNode:
     def delete(self, val):
         if val < self.data:
             if self.left:
-                self.left.delete(val)
+                self.left.delete(val) #this recursive approach will be useful to shortened the code and lessen nested if-else/elif conditionals
             #no need for these code since python will automatically do this
             #else:
             #   return None
         elif val > self.data:
             if self.right:
                 self.right.delete(val)
+        else:
+            if self.left is None and self.right is None:
+                return None
             
 
 
