@@ -101,5 +101,7 @@ if __name__ == '__main__':
 
     #print("In Order Traversal: \n", numbers_tree.in_order_traversal())
     print("Pre-Order Traversal: \n", numbers_tree.pre_order_traversal())
+    print("Post-Order Traversal: \n", numbers_tree.post_order_traversal())
+
 
 
