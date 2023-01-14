@@ -20,3 +20,6 @@ class BinarySearchTreeNode:
                 self.right.add_child(data) #if self.right already has a value--recursively call the function to create another small subtree with another child value
             else:
                 self.right = BinarySearchTreeNode(data)
+    
+    def in_order_traversal(self):
+        elements = []
