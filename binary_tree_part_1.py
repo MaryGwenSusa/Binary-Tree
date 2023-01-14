@@ -116,7 +116,7 @@ class BinarySearchTreeNode:
             if self.right:
                 self.right = self.right.delete(val)
         else:
-            if self.left is None and self.right is None: #has two child nodes
+            if self.left is None and self.right is None: #regards to no child node at all
                 return None
             if self.left is None: #this is for when there is only one child
                 return self.right
