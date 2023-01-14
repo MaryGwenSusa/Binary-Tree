@@ -92,8 +92,6 @@ class BinarySearchTreeNode:
             return self.data
         return self.right.find_max()
 
-        
-
 def build_tree(elements):
     #helper method - takes elements as inputs
     root = BinarySearchTreeNode(elements[0])
@@ -113,6 +111,6 @@ if __name__ == '__main__':
     #print("Pre-Order Traversal: \n", numbers_tree.pre_order_traversal())
     #print("Post-Order Traversal: \n", numbers_tree.post_order_traversal())
     print("Min:",numbers_tree.find_min())
-
+    print("Max:",numbers_tree.find_max())
 
 
