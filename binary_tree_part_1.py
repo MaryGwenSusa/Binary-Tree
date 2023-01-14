@@ -7,3 +7,12 @@ class BinarySearchTreeNode:
     def add_child(self, data):
         if data == self.data:
             return
+
+        if data < self.data:
+            #add data in left subtree
+            if self.left:
+                pass
+            else:
+                self.left = BinarySearchTreeNode(data)
+        else:
+            #add data in right subtree
