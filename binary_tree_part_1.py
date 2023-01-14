@@ -109,6 +109,13 @@ class BinarySearchTreeNode:
         if val < self.data:
             if self.left:
                 self.left.delete(val)
+            #no need for these code since python will automatically do this
+            #else:
+            #   return None
+        elif val > self.data:
+            if self.right:
+                self.right.delete(val)
+            
 
 
 
