@@ -43,9 +43,15 @@ class BinarySearchTreeNode:
 
         if self.left:
             elements += self.left.pre_order_traversal()
-            
+
         if self.right:
             elements += self.right.pre_order_traversal()
+
+        return elements
+
+    def post_order_traversal(self):
+        elements = []
+
     
     def search(self, val):
         if self.data == val:
@@ -81,5 +87,9 @@ if __name__ == '__main__':
     #main method to execute a coroutine on the default event loop?
     numbers = [17, 4, 1, 20, 9, 23, 18, 34, 18, 4]
     numbers_tree = build_tree(numbers)
-    #print(numbers_tree.in_order_traversal())
-    print(numbers_tree.search(105))
+    #print(numbers_tree.search(105))
+
+    #print("In Order Traversal: \n", numbers_tree.in_order_traversal())
+    print("Pre-Order Traversal: \n", numbers_tree.pre_order_traversal())
+
+
