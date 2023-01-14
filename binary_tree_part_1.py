@@ -36,3 +36,7 @@ class BinarySearchTreeNode:
             elements += self.right.in_order_traversal()
 
         return elements
+
+    if __name__ == '__main__':
+        #main method to execute a coroutine on the default event loop?
+        numbers = [17, 4, 1, 20, 9, 23, 18, 34]
