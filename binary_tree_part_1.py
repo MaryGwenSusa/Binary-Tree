@@ -11,8 +11,12 @@ class BinarySearchTreeNode:
         if data < self.data:
             #add data in left subtree
             if self.left:
-                pass
+                self.left.add_child(data) #if self.left already has a value--recursively call the function to create another small subtree with another child value
             else:
                 self.left = BinarySearchTreeNode(data)
         else:
             #add data in right subtree
+            if self.right:
+                self.right.add_child(data) #if self.right already has a value--recursively call the function to create another small subtree with another child value
+            else:
+                self.right = BinarySearchTreeNode(data)
