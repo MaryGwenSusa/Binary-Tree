@@ -118,6 +118,12 @@ class BinarySearchTreeNode:
         else:
             if self.left is None and self.right is None:
                 return None
+            if self.left is None: #this is for when there is only one child
+                return self.right
+            if self.right is None: #this is for when there is only one child
+                return self.left
+            
+            
             
 
 
